@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useRouter, usePathname } from "next/navigation";
 import { motion } from "framer-motion";
 
@@ -11,7 +11,12 @@ export default function Nav() {
     { id: "/", label: "Home" },
     { id: "/resume", label: "Resume" },
   ];
+  
   const [activeTab, setActiveTab] = useState(pathname);
+
+  useEffect(() => {
+    setActiveTab(pathname);
+  }, [pathname])
 
   const handleNavClick = (nav) => {
     if (activeTab === nav) {
