@@ -1,10 +1,13 @@
 "use client";
 import React, { useEffect } from "react";
-import {  useAnimate } from "framer-motion";
+import { useAnimate } from "framer-motion";
 
 export default function Home() {
   const [scope, animate] = useAnimate();
-  
+
+  useEffect(() => {
+    animate("div", { opacity: 1 });
+  });
 
   return (
     <div

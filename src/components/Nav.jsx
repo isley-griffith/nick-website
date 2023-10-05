@@ -1,7 +1,6 @@
 "use client";
 import React, { useState } from "react";
 import { useRouter, usePathname } from "next/navigation";
-import classnames from "classnames";
 import { motion } from "framer-motion";
 
 export default function Nav() {

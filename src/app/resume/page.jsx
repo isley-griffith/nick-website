@@ -1,8 +1,8 @@
 "use client";
-import React, { useEffect, useRef } from "react";
+import React, { useEffect } from "react";
 import classnames from "classnames";
 import Image from "next/image";
-import { useAnimate, useInView } from "framer-motion";
+import { useAnimate } from "framer-motion";
 
 export default function Resume() {
   const [scope, animate] = useAnimate();
