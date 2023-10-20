@@ -76,6 +76,64 @@ export default function Resume() {
   return (
     <div className="mx-0 p-8 lg:pt-[0em] lg:pb-[8em] md:pb-[12em] mb-[8em] md:mt-[0em] sm:mt-[4em]">
       <div className="grid w-full grid-cols-1 mx-2 sm:gap-8 xxs:gap-8 xxs:grid-cols-1 md:grid-cols-1 md:pt-24 sm:pt-12 xxs:pt-24 mobile:pt-32">
+        <div className="mt-8 lg:mx-24">
+          <div className="flex lg:justify-start md:justify-center sm:justify-center xxs:justify-center mobile:justify-center">
+            <h1 className="text-3xl font-bold">Skills</h1>
+            {/* <div className="flex items-center flex-grow mt-8 space-x-4">
+              <div className="flex w-full h-0 border-t border-dashed border-primary" />
+              <div className="w-4 h-4 ml-2 bg-orange-400 border border-black rounded-full"></div>
+            </div> */}
+          </div>
+          <div className="lg:mx-12">
+            <h3 className="mt-4 text-xl font-normal">Languages</h3>
+            <div className="grid grid-cols-3">
+              <ul>
+                <li>JavaScript</li>
+                <li>HTML</li>
+                <li>CSS</li>
+              </ul>
+              <ul>
+                <li>TypeScript</li>
+                <li>Python</li>
+                <li>Java</li>
+              </ul>
+              <ul>
+                <li>SQL</li>
+                <li>PostgreSQL</li>
+                <li>Bash</li>
+              </ul>
+            </div>
+            <h3 className="mt-4 text-xl font-normal">Frameworks & Libraries</h3>
+            <div className="grid grid-cols-3">
+              <ul>
+                <li>Node.js</li>
+                <li>Next.js</li>
+                <li>Tailwind</li>
+              </ul>
+              <ul>
+                <li>Prisma</li>
+                <li>Jest</li>
+                <li>GraphQL</li>
+              </ul>
+              <ul>
+                <li>React Native</li>
+              </ul>
+            </div>
+            <h3 className="mt-4 text-xl font-normal">Tools</h3>
+            <div className="grid grid-cols-3">
+              <ul>
+                <li>Git</li>
+                <li>AWS (S3)</li>
+                <li>Docker</li>
+              </ul>
+              <ul>
+                <li>Firebase</li>
+                <li>Cloud Firestore</li>
+                <li>VS Code</li>
+              </ul>
+            </div>
+          </div>
+        </div>
         <h1 className="text-3xl font-bold lg:mx-24 lg:text-left md:text-center sm:text-center xxs:text-center mobile:text-center lg:mb-0 md:mb-0 sm:mb-0 xxs:mb-0 mobile:mb-8">
           Experience
         </h1>
@@ -143,66 +201,6 @@ export default function Resume() {
             </li>
           ))}
         </ul>
-        <div className="mt-8 lg:mx-24">
-          <div className="flex lg:justify-start md:justify-center sm:justify-center xxs:justify-center mobile:justify-center">
-            <h1 className="text-3xl font-bold">
-              Skills
-            </h1>
-            {/* <div className="flex items-center flex-grow mt-8 space-x-4">
-              <div className="flex w-full h-0 border-t border-dashed border-primary" />
-              <div className="w-4 h-4 ml-2 bg-orange-400 border border-black rounded-full"></div>
-            </div> */}
-          </div>
-          <div className="lg:mx-12">
-            <h3 className="mt-4 text-xl font-normal">Languages</h3>
-            <div className="grid grid-cols-3">
-              <ul>
-                <li>JavaScript</li>
-                <li>HTML</li>
-                <li>CSS</li>
-              </ul>
-              <ul>
-                <li>TypeScript</li>
-                <li>Python</li>
-                <li>Java</li>
-              </ul>
-              <ul>
-                <li>SQL</li>
-                <li>PostgreSQL</li>
-                <li>Bash</li>
-              </ul>
-            </div>
-            <h3 className="mt-4 text-xl font-normal">Frameworks & Libraries</h3>
-            <div className="grid grid-cols-3">
-              <ul>
-                <li>Node.js</li>
-                <li>Next.js</li>
-                <li>Tailwind</li>
-              </ul>
-              <ul>
-                <li>Prisma</li>
-                <li>Jest</li>
-                <li>GraphQL</li>
-              </ul>
-              <ul>
-                <li>React Native</li>
-              </ul>
-            </div>
-            <h3 className="mt-4 text-xl font-normal">Tools</h3>
-            <div className="grid grid-cols-3">
-              <ul>
-                <li>Git</li>
-                <li>AWS (S3)</li>
-                <li>Docker</li>
-              </ul>
-              <ul>
-                <li>Firebase</li>
-                <li>Cloud Firestore</li>
-                <li>VS Code</li>
-              </ul>
-            </div>
-          </div>
-        </div>
       </div>
     </div>
   );

@@ -16,7 +16,7 @@ export default function TopNav() {
       >
         <div className="absolute w-2 h-2 ml-2 bg-green-400 border border-black rounded-full opacity-50 right-2 top-2.5"></div>
         <span className="text-xs text-subtitle">Online</span>
-        <span className="font-normal">Isley Griffith</span>
+        <span className="font-normal">Nicholas Madsen</span>
         <span className="text-sm text-subtitle">Los Angeles, CA</span>
       </button>
       <div className="flex justify-center w-full mt-4">

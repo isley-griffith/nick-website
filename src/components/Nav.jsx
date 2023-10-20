@@ -9,14 +9,15 @@ export default function Nav() {
 
   let tabs = [
     { id: "/", label: "Home" },
+    { id: "/projects", label: "Projects" },
     { id: "/resume", label: "Resume" },
   ];
-  
+
   const [activeTab, setActiveTab] = useState(pathname);
 
   useEffect(() => {
     setActiveTab(pathname);
-  }, [pathname])
+  }, [pathname]);
 
   const handleNavClick = (nav) => {
     if (activeTab === nav) {
@@ -27,8 +28,8 @@ export default function Nav() {
       case "/":
         router.push("/");
         break;
-      case "/about":
-        router.push("/about");
+      case "/projects":
+        router.push("/projects");
         break;
       case "/resume":
         router.push("/resume");
@@ -39,7 +40,7 @@ export default function Nav() {
   };
 
   return (
-    <nav className="grid lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 xxs:grid-cols-1 text-xs bg-[#fafafa]/80 backdrop-blur-sm lg:rounded-full md:rounded-full sm:rounded-xl xxs:rounded-xl mobile:rounded-xl min-w-max p-2 z-50 mobile:p-2">
+    <nav className="grid lg:grid-cols-3 md:grid-cols-3 sm:grid-cols-1 xxs:grid-cols-1 text-xs bg-[#fafafa]/80 backdrop-blur-sm lg:rounded-full md:rounded-full sm:rounded-xl xxs:rounded-xl mobile:rounded-xl min-w-max p-2 z-50 mobile:p-2">
       {tabs.map((tab, index) => (
         <button
           key={index}
