@@ -95,6 +95,7 @@ export default function Projects() {
                   className="w-full h-auto rounded-xl"
                   sizes="100vw"
                   alt={project.alt}
+                  priority={true}
                 />
               </div>
             </div>

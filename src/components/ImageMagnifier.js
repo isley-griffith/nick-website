@@ -27,6 +27,7 @@ export default function ImageMagnifier({
         height={height}
         sizes={sizes}
         className="w-full h-auto rounded-lg"
+        priority={true}
         // onMouseEnter={(e) => {
         //   // update image size and turn-on magnifier
         //   const elem = e.currentTarget;
@@ -52,8 +53,8 @@ export default function ImageMagnifier({
           const elem = e.currentTarget;
           const { width, height } = elem.getBoundingClientRect();
           setSize([width, height]);
-          setShowMagnifier((prev) => !prev)}
-        }
+          setShowMagnifier((prev) => !prev);
+        }}
         alt={"img"}
       />
 
