@@ -2,6 +2,8 @@
 import React, { useEffect } from "react";
 import classnames from "classnames";
 import Image from "next/image";
+import { SiAutodesk, SiUnrealengine } from "react-icons/si";
+
 import { useAnimate } from "framer-motion";
 
 export default function Resume() {
@@ -85,30 +87,44 @@ export default function Resume() {
             </div> */}
           </div>
           <div className="lg:mx-12">
-            <h3 className="mt-4 text-xl font-normal">Languages</h3>
+            <h3 className="mt-4 text-xl font-normal">Software</h3>
             <div className="grid grid-cols-3">
               <ul>
-                <li>JavaScript</li>
-                <li>HTML</li>
-                <li>CSS</li>
+                <li className="flex items-center space-x-2">
+                  <SiAutodesk />
+                  <span>Maya</span>
+                </li>
+                <li className="flex items-center space-x-2">
+                  <Image
+                    src="/icons/zbrush-logo.svg"
+                    width={16}
+                    height={16}
+                    alt="ZBrush Logo"
+                  />
+                  <span>ZBrush</span>
+                </li>
+                <li className="flex items-center space-x-2">
+                  <SiUnrealengine />
+                  <span>Unreal Engine</span>
+                </li>
               </ul>
               <ul>
-                <li>TypeScript</li>
-                <li>Python</li>
-                <li>Java</li>
+                <li>Substance 3D Designer</li>
+                <li>Substance 3D Painter</li>
+                <li>Photoshop</li>
               </ul>
               <ul>
-                <li>SQL</li>
-                <li>PostgreSQL</li>
-                <li>Bash</li>
+                <li>Redshift</li>
+                <li>Marmoset Toolbag</li>
+                <li>Marvelous Designer</li>
               </ul>
             </div>
             <h3 className="mt-4 text-xl font-normal">Frameworks & Libraries</h3>
             <div className="grid grid-cols-3">
               <ul>
-                <li>Node.js</li>
-                <li>Next.js</li>
-                <li>Tailwind</li>
+                <li>Gaea</li>
+                <li>SpeedTree</li>
+                <li>Houdini</li>
               </ul>
               <ul>
                 <li>Prisma</li>

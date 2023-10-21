@@ -1,3 +1,4 @@
+"use client"
 import TopNav from "@/components/TopNav";
 import "./globals.css";
 

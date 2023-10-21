@@ -20,6 +20,7 @@ export default function Nav() {
   }, [pathname]);
 
   const handleNavClick = (nav) => {
+    console.log(pathname, nav);
     if (activeTab === nav) {
       return;
     }

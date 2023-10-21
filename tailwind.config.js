@@ -16,6 +16,7 @@ module.exports = {
         secondary: "#dcdddf",
         tertiary: "#f5f5f5",
         subtitle: "#b4b4b4",
+        button: "#373737",
       },
       fontFamily: {
         // Add 'Manrope' to the list of sans fonts
