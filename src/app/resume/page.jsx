@@ -17,62 +17,23 @@ export default function Resume() {
     {
       name: "Colorado College",
       title: null,
-      start: "Aug. 2017",
-      end: "May 2021",
+      start: "Aug. 2016",
+      end: "May 2020",
       img: "/ColoradoCollegeIcon.png",
-      description: ["B.S. in Computer Science"],
+      description: ["B.A. in Integrative Design and Architecture (IDA)"],
       alt: "Colorado College Logo",
     },
     {
-      name: "Bay Engineering",
-      title: "Software Engineering Intern",
-      start: "Nov. 2020",
-      img: "/BayEngineeringLogo.jpeg",
-      end: "Apr. 2021",
+      name: "Gnomon - School of VFX, Games, & Animation",
+      title: "Student, Games Track",
+      start: "Sept. 2021",
+      img: "/gnomon_logo.png",
+      end: "Sept. 2023",
       description: [
         "Developed machine learning model to predict battery voltage levels during lunar events for NASA's Lunar Reconnaissance Orbiter using TensorFlow.",
         "Used a Recurrent Neural Network called Long Short-Term Memory to optimize for long-term dependency.",
       ],
       alt: "Bay Engineering Logo",
-    },
-    {
-      name: "ByteLion",
-      title: "Software Engineer",
-      start: "Apr. 2021",
-      end: "Sept. 2021",
-      img: "/ByteLionLogo.png",
-      description: [
-        "Created mobile app, CareerCircle, for Allegis Group, in React Native & TypeScript for Android and iOS that helped underprivileged people find jobs.",
-        "Implemented authentication, including SSO, using Auth0.",
-        "Developed entire onboarding section for new users.",
-      ],
-      alt: "ByteLion Logo",
-    },
-    {
-      name: "Olive AI",
-      title: "Software Engineer",
-      start: "Sept. 2021",
-      end: "Sept. 2022",
-      img: "/OliveIcon.png",
-      description: [
-        "Built admin facing tool and desktop app using React, TypeScript, NextJS, and GraphQL used by hospitals and healthcare companies such as Blue Cross/Blue Shield.",
-        "Maintained and added features to the 'Loop Library' (Olive's app store), an Electron/React app with a Node/Express backend.",
-        "Handled displaying the “Loop” Catalog, end user subscriptions and installations, submissions and updates from 'Loop' developers, \nand administrative moderation for Olive employees that reviewed 'Loops.'",
-      ],
-      alt: "Olive AI Logo",
-    },
-    {
-      name: "RealT",
-      title: "Full Stack Software Engineer",
-      start: "Jan. 2023",
-      end: "Present",
-      img: "/RealTLogo.png",
-      description: [
-        "Architected and developed admin dashboard for company process streamlining and data management.",
-        "Leveraged PostgreSQL and React + NextJS to create an intuitive and responsive dashboard.",
-        "Improved company efficiency and provided a reliable source of truth for data.",
-      ],
-      alt: "RealT Logo",
     },
   ];
   return (
@@ -91,20 +52,12 @@ export default function Resume() {
             <div className="grid grid-cols-3">
               <ul>
                 <li className="flex items-center space-x-2">
-                  <SiAutodesk />
                   <span>Maya</span>
                 </li>
                 <li className="flex items-center space-x-2">
-                  <Image
-                    src="/icons/zbrush-logo.svg"
-                    width={16}
-                    height={16}
-                    alt="ZBrush Logo"
-                  />
                   <span>ZBrush</span>
                 </li>
                 <li className="flex items-center space-x-2">
-                  <SiUnrealengine />
                   <span>Unreal Engine</span>
                 </li>
               </ul>
@@ -118,34 +71,11 @@ export default function Resume() {
                 <li>Marmoset Toolbag</li>
                 <li>Marvelous Designer</li>
               </ul>
-            </div>
-            <h3 className="mt-4 text-xl font-normal">Frameworks & Libraries</h3>
-            <div className="grid grid-cols-3">
+
               <ul>
                 <li>Gaea</li>
                 <li>SpeedTree</li>
                 <li>Houdini</li>
-              </ul>
-              <ul>
-                <li>Prisma</li>
-                <li>Jest</li>
-                <li>GraphQL</li>
-              </ul>
-              <ul>
-                <li>React Native</li>
-              </ul>
-            </div>
-            <h3 className="mt-4 text-xl font-normal">Tools</h3>
-            <div className="grid grid-cols-3">
-              <ul>
-                <li>Git</li>
-                <li>AWS (S3)</li>
-                <li>Docker</li>
-              </ul>
-              <ul>
-                <li>Firebase</li>
-                <li>Cloud Firestore</li>
-                <li>VS Code</li>
               </ul>
             </div>
           </div>
