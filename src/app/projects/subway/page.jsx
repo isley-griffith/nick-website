@@ -59,6 +59,7 @@ export default function Subway() {
         <div className="grid gap-4 xl:grid-cols-3 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 xxs:grid-cols-1 mobile:grid-cols-1">
           <div>
             <ImageMagnifier
+              small
               zoomLevel={2.5}
               src="/Subway/BaseMetalRender.png"
               alt="Subway preview image"
@@ -69,6 +70,7 @@ export default function Subway() {
           </div>
           <div>
             <ImageMagnifier
+              small
               zoomLevel={2.5}
               src="/Subway/ConcreteFloorRender.png"
               alt="Subway preview image"
@@ -79,6 +81,7 @@ export default function Subway() {
           </div>
           <div>
             <ImageMagnifier
+              small
               zoomLevel={2.5}
               src="/Subway/ConcreteMod1Render.png"
               alt="Subway preview image"
@@ -89,6 +92,7 @@ export default function Subway() {
           </div>
           <div>
             <ImageMagnifier
+              small
               zoomLevel={2.5}
               src="/Subway/ConcreteMod2Render.png"
               alt="Subway preview image"
@@ -99,6 +103,7 @@ export default function Subway() {
           </div>
           <div>
             <ImageMagnifier
+              small
               zoomLevel={2.5}
               src="/Subway/FootPrintRender.png"
               alt="Subway preview image"
@@ -109,6 +114,7 @@ export default function Subway() {
           </div>
           <div>
             <ImageMagnifier
+              small
               zoomLevel={2.5}
               src="/Subway/MetalGrateRender.png"
               alt="Subway preview image"
@@ -119,6 +125,7 @@ export default function Subway() {
           </div>
           <div>
             <ImageMagnifier
+              small
               zoomLevel={2.5}
               src="/Subway/TrimSheet_001.png"
               alt="Subway preview image"
@@ -129,6 +136,7 @@ export default function Subway() {
           </div>
           <div>
             <ImageMagnifier
+              small
               zoomLevel={2.5}
               src="/Subway/WhiteTiles.png"
               alt="Subway preview image"

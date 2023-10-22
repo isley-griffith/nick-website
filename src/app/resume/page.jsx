@@ -20,7 +20,10 @@ export default function Resume() {
       start: "Aug. 2016",
       end: "May 2020",
       img: "/ColoradoCollegeIcon.png",
-      description: ["B.A. in Integrative Design and Architecture (IDA)"],
+      degree: "B.A. in Integrative Design and Architecture (IDA)",
+      degreeLink:
+        "https://www.coloradocollege.edu/academics/dept/art/requirements/concentrations/ida.html",
+      description: [],
       alt: "Colorado College Logo",
     },
     {
@@ -29,6 +32,10 @@ export default function Resume() {
       start: "Sept. 2021",
       img: "/gnomon_logo.png",
       end: "Sept. 2023",
+      degree: "Certificate in Digital Production: Games Track",
+      degreeLink:
+        "https://www.gnomon.edu/academics/certificate-digital-production/",
+
       description: [
         "Developed machine learning model to predict battery voltage levels during lunar events for NASA's Lunar Reconnaissance Orbiter using TensorFlow.",
         "Used a Recurrent Neural Network called Long Short-Term Memory to optimize for long-term dependency.",
@@ -117,8 +124,17 @@ export default function Resume() {
                 <div className="flex justify-center mt-4 ml-4">
                   <div className="flex w-full border-l border-dashed border-primary">
                     <ul className="flex flex-col list-disc  max-w-[70vw]">
+                      <li className="ml-16">
+                        <a
+                          href={experience.degreeLink}
+                          target="_blank"
+                          className="text-orange-400 underline underline-offset-2"
+                        >
+                          {experience.degree}
+                        </a>
+                      </li>
                       {experience.description.map((description, index) => (
-                        <li key={index} className="ml-16 ">
+                        <li key={index} className="ml-16 first:underline">
                           {description}
                         </li>
                       ))}
@@ -132,6 +148,15 @@ export default function Resume() {
                   <div className="flex justify-center mt-4 ml-4">
                     <div className="flex w-full border-l border-dashed lg:h-24 md:h-32 sm:h-48 xs:h-fit border-primary">
                       <ul className="flex flex-col list-disc">
+                        <li className="ml-16">
+                          <a
+                            href={experience.degreeLink}
+                            target="_blank"
+                            className="text-orange-400 underline underline-offset-2"
+                          >
+                            {experience.degree}
+                          </a>
+                        </li>
                         {experience.description.map((description, index) => (
                           <li key={index} className="ml-16">
                             {description}

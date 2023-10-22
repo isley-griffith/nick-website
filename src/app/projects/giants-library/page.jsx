@@ -49,6 +49,7 @@ export default function GiantsLibrary() {
         <div className="grid gap-4 xl:grid-cols-3 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 xxs:grid-cols-1 mobile:grid-cols-1">
           <div>
             <ImageMagnifier
+              small
               zoomLevel={2.5}
               src="/GiantsLibrary/Flag_001.png"
               alt="Giant's Library preview image"
@@ -59,6 +60,7 @@ export default function GiantsLibrary() {
           </div>
           <div>
             <ImageMagnifier
+              small
               zoomLevel={2.5}
               src="/GiantsLibrary/Chair.png"
               alt="Giant's Library preview image"
@@ -69,6 +71,7 @@ export default function GiantsLibrary() {
           </div>
           <div>
             <ImageMagnifier
+              small
               zoomLevel={2.5}
               src="/GiantsLibrary/Chan.png"
               alt="Giant's Library preview image"
@@ -79,6 +82,7 @@ export default function GiantsLibrary() {
           </div>
           <div>
             <ImageMagnifier
+              small
               zoomLevel={2.5}
               src="/GiantsLibrary/Cloth.png"
               alt="Giant's Library preview image"
@@ -89,6 +93,7 @@ export default function GiantsLibrary() {
           </div>
           <div>
             <ImageMagnifier
+              small
               zoomLevel={2.5}
               src="/GiantsLibrary/SandStone.png"
               alt="Giant's Library preview image"
@@ -99,6 +104,7 @@ export default function GiantsLibrary() {
           </div>
           <div>
             <ImageMagnifier
+              small
               zoomLevel={2.5}
               src="/GiantsLibrary/Brass_001.png"
               alt="Giant's Library preview image"

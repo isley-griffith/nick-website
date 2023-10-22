@@ -55,6 +55,7 @@ export default function ExecutionersPlaza() {
               width="1"
               height="1"
               sizes="100vw"
+              small
             />
           </div>
           <div>
@@ -65,6 +66,7 @@ export default function ExecutionersPlaza() {
               width="1"
               height="1"
               sizes="100vw"
+              small
             />
           </div>
           <div>
@@ -75,6 +77,7 @@ export default function ExecutionersPlaza() {
               width="1"
               height="1"
               sizes="100vw"
+              small
             />
           </div>
           <div>
@@ -85,6 +88,7 @@ export default function ExecutionersPlaza() {
               width="1"
               height="1"
               sizes="100vw"
+              small
             />
           </div>
           <div>
@@ -95,6 +99,7 @@ export default function ExecutionersPlaza() {
               width="1"
               height="1"
               sizes="100vw"
+              small
             />
           </div>
         </div>
