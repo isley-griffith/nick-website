@@ -36,10 +36,7 @@ export default function Resume() {
       degreeLink:
         "https://www.gnomon.edu/academics/certificate-digital-production/",
 
-      description: [
-        "Developed machine learning model to predict battery voltage levels during lunar events for NASA's Lunar Reconnaissance Orbiter using TensorFlow.",
-        "Used a Recurrent Neural Network called Long Short-Term Memory to optimize for long-term dependency.",
-      ],
+      description: [],
       alt: "Bay Engineering Logo",
     },
   ];
