@@ -1,17 +1,18 @@
 "use client";
 import React, { useEffect } from "react";
 import { useAnimate } from "framer-motion";
-
+import { FaArrowRight } from "react-icons/fa";
+import { useRouter } from "next/navigation"
 export default function Home() {
   const [scope, animate] = useAnimate();
-
+  const router = useRouter();
   useEffect(() => {
     animate("div", { opacity: 1 });
   });
 
   return (
     <div
-      className="p-8 lg:pt-[0em] lg:pb-[8em] md:pb-[8em] mb-[8em] sm:mt-[2em]"
+      className="p-8 lg:pt-[0em] lg:pb-[4em] md:pb-[8em] mb-[8em] sm:mt-[2em]"
       ref={scope}
     >
       <div className="grid w-full grid-cols-2 opacity-0 sm:grid-cols-1 sm:gap-8 xxs:gap-8 xxs:grid-cols-1 mobile:grid-cols-1 md:grid-cols-2 md:pt-24 sm:pt-12 xxs:pt-24 mobile:pt-36 mobile:gap-12">
@@ -29,11 +30,13 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="flex flex-col lg:pt-72 md:pt-0 md:order-1 sm:-order-1 xxs:-order-1 mobile:-order-1 lg:text-[80px] md:text-[48px] sm:text-[64px] xxs:text-[64px] mobile:text-[64px] text-[80px] font-light leading-none">
+        <div className="flex flex-col lg:pt-48 md:pt-0 md:order-1 sm:-order-1 xx`s:-order-1 mobile:-order-1 lg:text-[80px] md:text-[48px] sm:text-[64px] xxs:text-[64px] mobile:text-[64px] text-[80px] font-light leading-none">
           <div>Environment Artist</div>
           <div>and Prop Artist based in LA.</div>
         </div>
       </div>
+      <div className="absolute flex items-center justify-center space-x-2 text-lg font-normal uppercase cursor-pointer bottom-12 right-12" onClick={() => router.push("/projects")} ><span>Go to projects</span><FaArrowRight /></div>
+
     </div>
   );
 }
