@@ -13,7 +13,7 @@ export default function Projects() {
       title: "Giant's Library",
       src: "/GiantsLibrary/preview.jpg",
       description: [
-        "Made this scene in my environment class at Gnomon.",
+        "I made this scene during my environment class at Gnomon.",
         "Thank you to my professor Jon Arellano for helping me realize this piece.",
         "Based on the concept by Sean Randolph.",
         <a
@@ -84,9 +84,9 @@ export default function Projects() {
                   <h2 className="font-bold lg:text-3xl md:text-2xl sm:text-2xl xxs:text-xl mobile:text-xl mobile:mt-4">
                     {project.title}
                   </h2>
-                  <p className="flex flex-col w-full">
+                  <p className="flex flex-col">
                     {project.description.map((paragraph, index) => (
-                      <span key={index} className="block">
+                      <span key={index} className="w-full">
                         {paragraph}
                       </span>
                     ))}

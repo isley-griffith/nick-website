@@ -1,9 +1,8 @@
 /* eslint-disable @next/next/no-img-element */
 "use client";
 import Image from "next/image";
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef } from "react";
 import classnames from "classnames";
-import { Skeleton } from "@mui/material";
 
 export default function ImageMagnifier({
   src,
@@ -19,28 +18,7 @@ export default function ImageMagnifier({
   const [[imgWidth, imgHeight], setSize] = useState([0, 0]);
   const [showMagnifier, setShowMagnifier] = useState(false);
 
-  const [loaded, setLoaded] = useState(false);
-
   const imageRef = useRef(null);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        // When element's in viewport,
-        // we know it's loaded because the Image component uses lazy loading by default.
-        if (entry.isIntersecting) {
-          setLoaded(true);
-          observer.disconnect(); // Once loaded, there's no need to observe anymore.
-        }
-      });
-    });
-
-    if (imageRef.current) {
-      observer.observe(imageRef.current);
-    }
-
-    return () => observer.disconnect(); // Clean up
-  }, []);
 
   return (
     <div
@@ -50,26 +28,13 @@ export default function ImageMagnifier({
         width: width,
       }}
     >
-      {!loaded && (
-        <Skeleton
-          variant="square"
-          className="rounded-lg"
-          width={small ? "31vw" : "95vw"}
-          height={small ? "31vw" : "95vh"}
-          animation="wave"
-          sizes={sizes}
-        />
-      )}
       <div ref={imageRef} className="w-full h-full">
         <Image
           src={src}
           width={width}
           height={height}
           sizes={sizes}
-          className={classnames(
-            "w-full h-auto rounded-lg",
-            loaded ? "opacity-100" : "opacity-0 h-0 w-0"
-          )}
+          className={classnames("w-full h-auto rounded-lg")}
           priority
           onMouseMove={(e) => {
             // update cursor position

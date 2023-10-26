@@ -2,7 +2,6 @@
 import React, { useEffect } from "react";
 import classnames from "classnames";
 import Image from "next/image";
-import { SiAutodesk, SiUnrealengine } from "react-icons/si";
 
 import { useAnimate } from "framer-motion";
 
@@ -23,7 +22,9 @@ export default function Resume() {
       degree: "B.A. in Integrative Design and Architecture (IDA)",
       degreeLink:
         "https://www.coloradocollege.edu/academics/dept/art/requirements/concentrations/ida.html",
-      description: [],
+      description: [
+        "At Colorado College, I explored a spectrum of design disciplines, from graphic design to architecture. My senior thesis incorporated digital 3D art as a narrative tool, and for that, I was honored with an award by the school.",
+      ],
       alt: "Colorado College Logo",
     },
     {
@@ -35,13 +36,66 @@ export default function Resume() {
       degree: "Certificate in Digital Production: Games Track",
       degreeLink:
         "https://www.gnomon.edu/academics/certificate-digital-production/",
-
-      description: [],
+      description: [
+        "At Gnomon, I learned industry-standard techniques in animation, modeling, texturing, and rendering. This training steered me towards specializing in environment creation for the gaming industry.",
+      ],
       alt: "Bay Engineering Logo",
     },
   ];
+
+  const skills = [
+    ["Creation", "Maya", "ZBrush", "Houdini", "Marvelous Designer"],
+    [
+      "Texturing",
+      "Substance 3D Designer",
+      "Substance 3D Painter",
+      "Marmoset Toolbag",
+      "SpeedTree",
+    ],
+    ["Rendering", "Redshift", "V-Ray", "Gaea", "Unreal Engine 4/5"],
+  ];
+
+  const miscSkills = [
+    [
+      "PBR Texturing",
+      "Tilable Materials",
+      "Unreal Blueprints",
+      "Environment Creation",
+    ],
+    ["Concept Art", "3D Modeling", "Sculpting", "Animation"],
+    ["Bilingual: English and Spanish", "Procedural Modeling", "Rigging", "VFX"],
+  ];
+
+  const awards = [
+    {
+      awardLocation: "Gnomon - School of VFX, Games, & Animation",
+      awards: [
+        {
+          awardName: "Best of Term - Games Environment | Interior",
+          dateIssued: "Dec. 2022",
+        },
+        {
+          awardName: "Best of Term - Games Environment | Medieval",
+          dateIssued: "Aug. 2023",
+        },
+      ],
+    },
+    {
+      awardLocation: "Colorado College",
+      awards: [
+        {
+          awardName: "Outstanding Senior Thesis",
+          dateIssued: "May 2020",
+        },
+      ],
+    },
+  ];
+
   return (
-    <div className="mx-0 p-8 lg:pt-[0em] lg:pb-[8em] md:pb-[12em] mb-[8em] md:mt-[0em] sm:mt-[4em]">
+    <div
+      className="mx-0 p-8 lg:pt-[0em] lg:pb-[8em] md:pb-[12em] mb-[8em] md:mt-[0em] sm:mt-[4em]"
+      ref={scope}
+    >
       <div className="grid w-full grid-cols-1 mx-2 sm:gap-8 xxs:gap-8 xxs:grid-cols-1 md:grid-cols-1 md:pt-24 sm:pt-12 xxs:pt-24 mobile:pt-32">
         <div className="mt-8 lg:mx-24">
           <div className="flex lg:justify-start md:justify-center sm:justify-center xxs:justify-center mobile:justify-center">
@@ -51,41 +105,60 @@ export default function Resume() {
               <div className="w-4 h-4 ml-2 bg-orange-400 border border-black rounded-full"></div>
             </div> */}
           </div>
-          <div className="lg:mx-12">
-            <h3 className="mt-4 text-xl font-normal">Software</h3>
+          <div className="mx-12">
+            <h3 className="mt-4 text-2xl font-bold">Software</h3>
             <div className="grid grid-cols-3">
-              <ul>
-                <li className="flex items-center space-x-2">
-                  <span>Maya</span>
-                </li>
-                <li className="flex items-center space-x-2">
-                  <span>ZBrush</span>
-                </li>
-                <li className="flex items-center space-x-2">
-                  <span>Unreal Engine</span>
-                </li>
-              </ul>
-              <ul>
-                <li>Substance 3D Designer</li>
-                <li>Substance 3D Painter</li>
-                <li>Photoshop</li>
-              </ul>
-              <ul>
-                <li>Redshift</li>
-                <li>Marmoset Toolbag</li>
-                <li>Marvelous Designer</li>
-              </ul>
-
-              <ul>
-                <li>Gaea</li>
-                <li>SpeedTree</li>
-                <li>Houdini</li>
-              </ul>
+              {skills.map((skillets, index) => (
+                <div key={index} className="flex flex-col mt-2 space-y-2">
+                  {skillets.map((skill, index) => (
+                    <span
+                      key={index}
+                      className="font-normal first:font-bold first:text-lg"
+                    >
+                      {skill}
+                    </span>
+                  ))}
+                </div>
+              ))}
+            </div>
+          </div>
+          <div className="mx-12">
+            <h3 className="mt-4 text-2xl font-bold">Miscellaneous</h3>
+            <div className="grid grid-cols-3">
+              {miscSkills.map((skillets, index) => (
+                <div key={index} className="flex flex-col mt-2 space-y-2">
+                  {skillets.map((skill, index) => (
+                    <span key={index} className="font-normal">
+                      {skill}
+                    </span>
+                  ))}
+                </div>
+              ))}
             </div>
           </div>
         </div>
+        <h1 className="mt-8 text-3xl font-bold lg:mx-24 lg:text-left md:text-center sm:text-center xxs:text-center mobile:text-center lg:mb-0 md:mb-0 sm:mb-0 xxs:mb-0 mobile:mb-8">
+          Awards
+        </h1>
+        <ul className="flex flex-col items-start justify-center mb-8 space-y-4 lg:mx-32">
+          {awards.map((award, index) => (
+            <li key={index} className="flex flex-col w-full opacity-0">
+              <div className="text-xl font-bold">{award.awardLocation}</div>
+              {award.awards.map((award, index) => (
+                <li key={index} className="ml-6 font-normal list-disc">
+                  <div className="flex justify-between">
+                    <span>{award.awardName}</span>
+                    <div className="flex items-center flex-grow h-1 mx-12 mt-3 border-b-2 border-dotted border-slate-300/40"></div>
+
+                    <span>{award.dateIssued}</span>
+                  </div>
+                </li>
+              ))}
+            </li>
+          ))}
+        </ul>
         <h1 className="text-3xl font-bold lg:mx-24 lg:text-left md:text-center sm:text-center xxs:text-center mobile:text-center lg:mb-0 md:mb-0 sm:mb-0 xxs:mb-0 mobile:mb-8">
-          Experience
+          Education
         </h1>
         <ul
           className="flex flex-col items-start justify-center space-y-4 lg:mx-32"
@@ -111,7 +184,7 @@ export default function Resume() {
                   )}
                 </span>
                 <div className="flex justify-between w-full space-x-10">
-                  <span className="font-normal">{experience.name}</span>
+                  <span className="text-lg font-normal">{experience.name}</span>
                   <div className="flex items-center flex-grow h-1 mt-3 border-b-2 border-dotted border-slate-300/40"></div>
                   <span className="mr-8 font-normal min-w-fit">{`${experience.start} - ${experience.end}`}</span>
                 </div>
@@ -131,9 +204,9 @@ export default function Resume() {
                         </a>
                       </li>
                       {experience.description.map((description, index) => (
-                        <li key={index} className="ml-16 first:underline">
+                        <span key={index} className="ml-16 first:underline">
                           {description}
-                        </li>
+                        </span>
                       ))}
                     </ul>
                   </div>
@@ -155,9 +228,9 @@ export default function Resume() {
                           </a>
                         </li>
                         {experience.description.map((description, index) => (
-                          <li key={index} className="ml-16">
+                          <span key={index} className="ml-16">
                             {description}
-                          </li>
+                          </span>
                         ))}
                       </ul>
                     </div>
