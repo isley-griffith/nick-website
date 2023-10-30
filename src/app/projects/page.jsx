@@ -24,6 +24,9 @@ export default function Projects() {
         >
           Link to Sean&apos;s Concept
         </a>,
+        <span key="2" className="font-bold">
+          Software used: Maya, ZBrush, Substance Painter, Substance Designer, Houdini, Marvelous Designer, Quixel Mixer, Marmoset Toolbag 4, Unreal Engine 5.
+        </span>
       ],
       path: "/projects/giants-library",
       alt: "Giant's Library preview image",
