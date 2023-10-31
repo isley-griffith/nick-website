@@ -2,7 +2,7 @@
 import React, { useEffect } from "react";
 import { useAnimate } from "framer-motion";
 import { FaArrowRight } from "react-icons/fa";
-import { useRouter } from "next/navigation"
+import { useRouter } from "next/navigation";
 export default function Home() {
   const [scope, animate] = useAnimate();
   const router = useRouter();
@@ -35,8 +35,13 @@ export default function Home() {
           <div>and Prop Artist based in LA.</div>
         </div>
       </div>
-      <div className="absolute flex items-center justify-center space-x-2 text-lg font-normal uppercase cursor-pointer bottom-12 right-12" onClick={() => router.push("/projects")} ><span>Go to projects</span><FaArrowRight /></div>
-
+      <div
+        className="absolute flex items-center justify-center p-2 px-4 space-x-2 text-lg font-normal text-white rounded-lg cursor-pointer bottom-12 right-12 hover:scale-101 bg-button"
+        onClick={() => router.push("/projects")}
+      >
+        <span>View projects</span>
+        <FaArrowRight className="w-4 h-3"/>
+      </div>
     </div>
   );
 }

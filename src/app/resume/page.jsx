@@ -1,7 +1,10 @@
+/* eslint-disable @next/next/no-img-element */
 "use client";
 import React, { useEffect } from "react";
 import classnames from "classnames";
 import Image from "next/image";
+
+import { FaFileDownload } from "react-icons/fa";
 
 import { useAnimate } from "framer-motion";
 
@@ -173,7 +176,7 @@ export default function Resume() {
                   )}
                 >
                   {experience.img && (
-                    <Image
+                    <img
                       src={experience?.img}
                       className="min-w-full min-h-full rounded-full aspect-square"
                       quality={100}
@@ -243,6 +246,14 @@ export default function Resume() {
           ))}
         </ul>
       </div>
+      <a
+        className="fixed flex items-center p-2 px-4 space-x-2 rounded-lg cursor-pointer bottom-8 right-8 bg-button"
+        href="https://drive.google.com/file/d/1QMGz3XumykvA9nmWK_P0H9tikvB0GW3l/view?usp=sharing"
+        target="_blank"
+      >
+        <span className="text-white">Download Full Resume</span>
+        <FaFileDownload className="w-4 h-4 text-white" />
+      </a>
     </div>
   );
 }

@@ -29,12 +29,11 @@ export default function ImageMagnifier({
       }}
     >
       <div ref={imageRef} className="w-full h-full">
-        <Image
+        <img
           src={src}
           width={width}
           height={height}
           sizes={sizes}
-          objectFit="cover"
           className={classnames("w-full h-auto rounded-lg")}
           priority
           onMouseMove={(e) => {

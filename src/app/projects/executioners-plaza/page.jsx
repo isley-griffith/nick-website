@@ -177,9 +177,6 @@ export default function ExecutionersPlaza() {
                   80% of the time. For the remaining 20%, I manually
                   retopologized or simplified models based on the blockout.
                 </p>
-                <span className="flex text-[128px] font-mono justify-end text-right mx-6 xl:opacity-100 lg:opacity-100 md:opacity-0 sm:opacity-0 xxs:opacity-0 mobile:opacity-0 md:h-0 sm:h-0 xxs:h-0 mobile:h-0">
-                  2
-                </span>
               </div>
             </div>
 
@@ -229,7 +226,7 @@ export default function ExecutionersPlaza() {
                 mind. This brought the entire scene together.
               </p>
             </div>
-            <p>
+            <p className="font-bold"> 
               Made with: Maya, ZBrush, Substance Painter, Substance
               Designer, Houdini, Marvelous Designer, Quixel Mixer, Marmoset
               Toolbag 4, Unreal Engine 5.

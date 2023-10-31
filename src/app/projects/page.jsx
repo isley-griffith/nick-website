@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 "use client";
 import React from "react";
 import Image from "next/image";
@@ -10,30 +11,9 @@ export default function Projects() {
 
   const projects = [
     {
-      title: "Giant's Library",
-      src: "/GiantsLibrary/preview.jpg",
-      description: [
-        "I made this scene during my environment class at Gnomon.",
-        "Thank you to my professor Jon Arellano for helping me realize this piece.",
-        "Based on the concept by Sean Randolph.",
-        <a
-          key="1"
-          href="https://www.artstation.com/artwork/yqxm9"
-          target="_blank"
-          className="underline underline-offset-4"
-        >
-          Link to Sean&apos;s Concept
-        </a>,
-        <span key="2" className="font-bold">
-          Software used: Maya, ZBrush, Substance Painter, Substance Designer, Houdini, Marvelous Designer, Quixel Mixer, Marmoset Toolbag 4, Unreal Engine 5.
-        </span>
-      ],
-      path: "/projects/giants-library",
-      alt: "Giant's Library preview image",
-    },
-    {
       title: "Executioner's Plaza",
       src: "/ExecutionersPlaza/preview.jpg",
+      dateCompleted: "July 2023",
       description: [
         "Inspired by concept by Gavin Manners",
         <a
@@ -44,26 +24,55 @@ export default function Projects() {
         >
           Link to Gavin&apos;s Concept
         </a>,
+      ],
+      footer: (
         <span key="2" className="font-bold">
           Software used: Maya, ZBrush, Substance Painter, Substance Designer,
           Houdini, Marvelous Designer, Quixel Mixer, Marmoset Toolbag 4, Unreal
           Engine 5.
-        </span>,
-      ],
+        </span>
+      ),
       path: "/projects/executioners-plaza",
       alt: "Executioner's Plaza preview image",
     },
     {
+      title: "Giant's Library",
+      src: "/GiantsLibrary/preview.jpg",
+      dateCompleted: "December 2020",
+      description: [
+        "Based on the concept by Sean Randolph.",
+        <a
+          key="1"
+          href="https://www.artstation.com/artwork/yqxm9"
+          target="_blank"
+          className="underline underline-offset-4"
+        >
+          Link to Sean&apos;s Concept
+        </a>,
+      ],
+      footer: (
+        <span key="2" className="font-bold">
+          Software used: Maya, ZBrush, Substance Painter, Substance Designer,
+          Houdini, Marvelous Designer, Quixel Mixer, Marmoset Toolbag 4, Unreal
+          Engine 5.
+        </span>
+      ),
+      path: "/projects/giants-library",
+      alt: "Giant's Library preview image",
+    },
+    {
       title: "Subway Stop",
       src: "/Subway/preview.jpg",
+      dateCompleted: "September 2023",
       description: [
-        "Made at Gnomon for my texturing and shading for games class",
-        "Responsible for all aspects.",
+        "Original concept based on NYC subway stations. Responsible for all aspects.",
+      ],
+      footer: (
         <span key="2" className="mt-12 font-bold">
           Software used: Maya, Unreal Engine 5, ZBrush, Substance Designer,
           Substance Painter, and Houdini.
-        </span>,
-      ],
+        </span>
+      ),
       path: "/projects/subway",
       alt: "Subway preview image",
     },
@@ -79,10 +88,10 @@ export default function Projects() {
         {projects.map((project, index) => (
           <div
             key={index}
-            className="p-8 transition-all duration-200 rounded-lg hover:bg-gray-300/20 hover:scale-[100.25%]"
+            className="p-8 transition-all duration-200 rounded-lg hover:bg-gray-300/20 hover:scale-[100.25%] "
           >
-            <div className="grid xl:mx-20 lg:mx-20 md:mx-16 sm:mx-12 xxs:mx-8 mobile:mx-4 xl:grid-cols-2 lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 xxs:grid-cols-1 mobile:grid-cols-1 lg:justify-between md:justify-between">
-              <div className="flex flex-col justify-between h-full mr-16 space-y-4 xl:order-1 lg:order-1 md:order-1 sm:order-12 xxs:order-12 mobile:order-12">
+            <div className="grid xl:grid-cols-2 lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 xxs:grid-cols-1 mobile:grid-cols-1 lg:justify-between md:justify-between">
+              <div className="flex flex-col justify-between h-full space-y-4 xl:order-1 lg:order-1 md:order-1 sm:order-12 xxs:order-12 mobile:order-12">
                 <div className="space-y-2">
                   <h2 className="font-bold lg:text-3xl md:text-2xl sm:text-2xl xxs:text-xl mobile:text-xl mobile:mt-4">
                     {project.title}
@@ -95,21 +104,27 @@ export default function Projects() {
                     ))}
                   </p>
                 </div>
-                <div
-                  onClick={() => handleRouteClick(project.path)}
-                  className="flex items-center p-2 px-4 space-x-4 text-2xl font-light text-white rounded-lg cursor-pointer bg-button w-fit xl:order-2 lg:order-2 md:order-2 sm:order-12 xxs:order-12 mobile:order-12"
-                >
-                  <span className="xl:text-xl lg:text-xl md:text-xl sm:text-lg xxs:text-lg mobile:text-sm hover:underline hover:underline-offset-2">
-                    View project
+                <div className="flex items-center justify-between w-full">
+                  <div
+                    onClick={() => handleRouteClick(project.path)}
+                    className="flex items-center order-1 p-2 px-4 space-x-4 text-2xl font-light text-white rounded-lg cursor-pointer bg-button w-fit xl:order-2 lg:order-2 md:order-2 sm:order-12 xxs:order-12 mobile:order-12"
+                  >
+                    <span className="xl:text-xl lg:text-xl md:text-xl sm:text-lg xxs:text-lg mobile:text-sm hover:underline hover:underline-offset-2">
+                      View project
+                    </span>
+                    <FaArrowRight className="w-4 h-3 font-light" />
+                  </div>
+
+                  <span className="order-2 text-sm text-gray-400">
+                    {project.dateCompleted}
                   </span>
-                  <FaArrowRight className="w-4 h-4" />
                 </div>
               </div>
               <div
-                className="xl:order-3 lg:order-3 md:order-3 sm:order-4 xxs:order-4 mobile:order-4 hover:cursor-pointer"
+                className="xl:ml-16 lg:ml-16 md:ml-0 sm:ml-0 xxs:ml-0 mobile:ml-0 xl:order-3 lg:order-3 md:order-3 sm:order-4 xxs:order-4 mobile:order-4 hover:cursor-pointer"
                 onClick={() => handleRouteClick(project.path)}
               >
-                <Image
+                <img
                   src={project.src}
                   width={1}
                   height={1}
