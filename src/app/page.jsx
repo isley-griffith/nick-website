@@ -31,8 +31,8 @@ export default function Home() {
         </div>
 
         <div className="flex flex-col lg:pt-48 md:pt-0 md:order-1 sm:-order-1 xx`s:-order-1 mobile:-order-1 lg:text-[80px] md:text-[48px] sm:text-[64px] xxs:text-[64px] mobile:text-[64px] text-[80px] font-light leading-none">
-          <div>Environment Artist</div>
-          <div>and Prop Artist based in LA.</div>
+          <div>Environment +</div>
+          <div>Prop Artist Based in LA.</div>
         </div>
       </div>
       <div

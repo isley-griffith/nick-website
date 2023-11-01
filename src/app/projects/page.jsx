@@ -38,7 +38,7 @@ export default function Projects() {
     {
       title: "Giant's Library",
       src: "/GiantsLibrary/preview.jpg",
-      dateCompleted: "December 2020",
+      dateCompleted: "December 2022",
       description: [
         "Based on the concept by Sean Randolph.",
         <a
@@ -65,7 +65,7 @@ export default function Projects() {
       src: "/Subway/preview.jpg",
       dateCompleted: "September 2023",
       description: [
-        "Original concept based on NYC subway stations. Responsible for all aspects.",
+        "Original concept based on NYC subway stations.",
       ],
       footer: (
         <span key="2" className="mt-12 font-bold">
@@ -115,7 +115,7 @@ export default function Projects() {
                     <FaArrowRight className="w-4 h-3 font-light" />
                   </div>
 
-                  <span className="order-2 text-sm text-gray-400">
+                  <span className="order-2 text-sm text-gray-400 sm:mr-8">
                     {project.dateCompleted}
                   </span>
                 </div>

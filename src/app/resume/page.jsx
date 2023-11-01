@@ -50,8 +50,8 @@ export default function Resume() {
     ["Creation", "Maya", "ZBrush", "Houdini", "Marvelous Designer"],
     [
       "Texturing",
-      "Substance 3D Designer",
-      "Substance 3D Painter",
+      "Substance Designer",
+      "Substance Painter",
       "Marmoset Toolbag",
       "SpeedTree",
     ],
@@ -105,14 +105,11 @@ export default function Resume() {
             <h1 className="text-3xl font-bold">Skills</h1>
           </div>
           <div className="lg:mx-12">
-            <h3 className="mt-4 text-2xl font-bold lg:opacity-100 md:opacity-100 sm:opacity-0 xxs:opacity-0 mobile:opacity-0">
-              Software
-            </h3>
             <div className="grid grid-cols-3">
               {skills.map((skillets, index) => (
                 <div
                   key={index}
-                  className="flex flex-col mt-2 space-y-2 lg:items-start md:items-start sm:items-center xxs:items-center mobile:items-center"
+                  className="flex flex-col mt-2 space-y-2 lg:items-start md:items-start sm:items-start xxs:items-start mobile:items-start"
                 >
                   {skillets.map((skill, index) => (
                     <span
@@ -127,14 +124,14 @@ export default function Resume() {
             </div>
           </div>
           <div className="lg:mx-12">
-            <div className="flex lg:justify-start md:justify-center sm:justify-center xxs:justify-center mobile:justify-center">
+            <div className="flex justify-start">
               <h1 className="mt-4 text-lg font-bold">Miscellaneous</h1>
             </div>
             <div className="grid grid-cols-3">
               {miscSkills.map((skillets, index) => (
                 <div
                   key={index}
-                  className="flex flex-col mt-2 space-y-2 lg:items-start md:items-start sm:items-center xxs:items-center mobile:items-center"
+                  className="flex flex-col mt-2 space-y-2 lg:items-start md:items-start sm:items-start xxs:items-start mobile:items-start"
                 >
                   {skillets.map((skill, index) => (
                     <span key={index} className="font-normal">
@@ -158,8 +155,9 @@ export default function Resume() {
                   <div className="flex justify-between">
                     <span>{award.awardName}</span>
                     <div className="flex items-center flex-grow h-1 mx-12 mt-3 border-b-2 border-dotted border-slate-300/40"></div>
-
-                    <span>{award.dateIssued}</span>
+                    <span className="text-sm whitespace-nowrap">
+                      {award.dateIssued}
+                    </span>
                   </div>
                 </li>
               ))}
@@ -192,10 +190,11 @@ export default function Resume() {
                     />
                   )}
                 </span>
-                <div className="flex justify-between w-full space-x-10">
-                  <span className="text-lg font-normal">{experience.name}</span>
-                  <div className="flex items-center flex-grow h-1 mt-3 border-b-2 border-dotted border-slate-300/40"></div>
-                  <span className="mr-8 font-normal min-w-fit">{`${experience.start} - ${experience.end}`}</span>
+                <div className="grid w-full xl:grid-cols-2 lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 xxs:grid-cols-1 mobile:grid-cols-1">
+                  <span className="text-lg font-normal xl:order-1 lg:order-1 md:order-1 sm:order-2 xxs:order-2 mobile:order-2 ">
+                    {experience.name}
+                  </span>
+                  <span className="text-sm font-normal whitespace-nowrap xl:order-2 lg:order-2 md:order-2 sm:order-2 xxs:order-2 mobile:order-2 xl:text-right lg:text-right md:text-right sm:text-left xxs:text-left mobile:text-left">{`${experience.start} - ${experience.end}`}</span>
                 </div>
               </div>
 
