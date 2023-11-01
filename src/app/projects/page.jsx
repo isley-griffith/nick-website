@@ -11,31 +11,6 @@ export default function Projects() {
 
   const projects = [
     {
-      title: "Executioner's Plaza",
-      src: "/ExecutionersPlaza/preview.jpg",
-      dateCompleted: "July 2023",
-      description: [
-        "Inspired by concept by Gavin Manners",
-        <a
-          key="1"
-          href="https://www.artstation.com/artwork/Kr22PR"
-          target="_blank"
-          className="underline underline-offset-4"
-        >
-          Link to Gavin&apos;s Concept
-        </a>,
-      ],
-      footer: (
-        <span key="2" className="font-bold">
-          Software used: Maya, ZBrush, Substance Painter, Substance Designer,
-          Houdini, Marvelous Designer, Quixel Mixer, Marmoset Toolbag 4, Unreal
-          Engine 5.
-        </span>
-      ),
-      path: "/projects/executioners-plaza",
-      alt: "Executioner's Plaza preview image",
-    },
-    {
       title: "Giant's Library",
       src: "/GiantsLibrary/preview.jpg",
       dateCompleted: "December 2022",
@@ -61,12 +36,35 @@ export default function Projects() {
       alt: "Giant's Library preview image",
     },
     {
+      title: "Executioner's Plaza",
+      src: "/ExecutionersPlaza/preview.jpg",
+      dateCompleted: "July 2023",
+      description: [
+        "Inspired by concept by Gavin Manners",
+        <a
+          key="1"
+          href="https://www.artstation.com/artwork/Kr22PR"
+          target="_blank"
+          className="underline underline-offset-4"
+        >
+          Link to Gavin&apos;s Concept
+        </a>,
+      ],
+      footer: (
+        <span key="2" className="font-bold">
+          Software used: Maya, ZBrush, Substance Painter, Substance Designer,
+          Houdini, Marvelous Designer, Quixel Mixer, Marmoset Toolbag 4, Unreal
+          Engine 5.
+        </span>
+      ),
+      path: "/projects/executioners-plaza",
+      alt: "Executioner's Plaza preview image",
+    },
+    {
       title: "Subway Stop",
       src: "/Subway/preview.jpg",
       dateCompleted: "September 2023",
-      description: [
-        "Original concept based on NYC subway stations.",
-      ],
+      description: ["Original concept based on NYC subway stations."],
       footer: (
         <span key="2" className="mt-12 font-bold">
           Software used: Maya, Unreal Engine 5, ZBrush, Substance Designer,

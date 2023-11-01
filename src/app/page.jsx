@@ -20,8 +20,9 @@ export default function Home() {
           <div className="flex flex-col text-sm lg:mb-4 lg:ml-12 lg:-order-1 md:-order-1 sm:order-1 xxs:order-1 mobile:order-1 mobile:space-y-10 lg:space-y-28 md:space-y-8 sm:space-y-10 xxs:space-y-10">
             <p>
               Over 2 years of experience in 3D environment and prop art.
-              Graduated from Gnomon and Colorado College with a degree in
-              Architecture and Integrative Design.
+              Graduated from Colorado College with a degree in Architecture and
+              Integrative Design, and from Gnomon School of VFX with an emphasis
+              in game art.
             </p>
             <div className="flex space-x-2">
               <span>Last Updated</span>
@@ -31,7 +32,7 @@ export default function Home() {
         </div>
 
         <div className="flex flex-col lg:pt-48 md:pt-0 md:order-1 sm:-order-1 xx`s:-order-1 mobile:-order-1 lg:text-[80px] md:text-[48px] sm:text-[64px] xxs:text-[64px] mobile:text-[64px] text-[80px] font-light leading-none">
-          <div>Environment +</div>
+          <div className="whitespace-nowrap">Environment +</div>
           <div>Prop Artist Based in LA.</div>
         </div>
       </div>
@@ -40,7 +41,7 @@ export default function Home() {
         onClick={() => router.push("/projects")}
       >
         <span>View projects</span>
-        <FaArrowRight className="w-4 h-3"/>
+        <FaArrowRight className="w-4 h-3" />
       </div>
     </div>
   );
