@@ -66,7 +66,7 @@ export default function Resume() {
       "Environment Creation",
     ],
     ["Concept Art", "3D Modeling", "Sculpting", "Animation"],
-    ["Bilingual: English and Spanish", "Procedural Modeling", "Rigging", "VFX"],
+    ["English / Spanish", "Procedural Modeling", "Rigging", "VFX"],
   ];
 
   const awards = [
@@ -103,16 +103,17 @@ export default function Resume() {
         <div className="mt-8 lg:mx-24">
           <div className="flex lg:justify-start md:justify-center sm:justify-center xxs:justify-center mobile:justify-center">
             <h1 className="text-3xl font-bold">Skills</h1>
-            {/* <div className="flex items-center flex-grow mt-8 space-x-4">
-              <div className="flex w-full h-0 border-t border-dashed border-primary" />
-              <div className="w-4 h-4 ml-2 bg-orange-400 border border-black rounded-full"></div>
-            </div> */}
           </div>
-          <div className="mx-12">
-            <h3 className="mt-4 text-2xl font-bold">Software</h3>
+          <div className="lg:mx-12">
+            <h3 className="mt-4 text-2xl font-bold lg:opacity-100 md:opacity-100 sm:opacity-0 xxs:opacity-0 mobile:opacity-0">
+              Software
+            </h3>
             <div className="grid grid-cols-3">
               {skills.map((skillets, index) => (
-                <div key={index} className="flex flex-col mt-2 space-y-2">
+                <div
+                  key={index}
+                  className="flex flex-col mt-2 space-y-2 lg:items-start md:items-start sm:items-center xxs:items-center mobile:items-center"
+                >
                   {skillets.map((skill, index) => (
                     <span
                       key={index}
@@ -125,11 +126,16 @@ export default function Resume() {
               ))}
             </div>
           </div>
-          <div className="mx-12">
-            <h3 className="mt-4 text-2xl font-bold">Miscellaneous</h3>
+          <div className="lg:mx-12">
+            <div className="flex lg:justify-start md:justify-center sm:justify-center xxs:justify-center mobile:justify-center">
+              <h1 className="mt-4 text-lg font-bold">Miscellaneous</h1>
+            </div>
             <div className="grid grid-cols-3">
               {miscSkills.map((skillets, index) => (
-                <div key={index} className="flex flex-col mt-2 space-y-2">
+                <div
+                  key={index}
+                  className="flex flex-col mt-2 space-y-2 lg:items-start md:items-start sm:items-center xxs:items-center mobile:items-center"
+                >
                   {skillets.map((skill, index) => (
                     <span key={index} className="font-normal">
                       {skill}
