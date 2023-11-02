@@ -253,7 +253,7 @@ export default function Resume() {
       </div>
       <a
         className="fixed flex items-center p-2 px-4 space-x-2 rounded-lg cursor-pointer bottom-8 right-8 bg-button"
-        href="https://drive.google.com/file/d/1QMGz3XumykvA9nmWK_P0H9tikvB0GW3l/view?usp=sharing"
+        href="https://drive.google.com/file/d/1QMGz3XumykvA9nmWK_P0H9tikvB0GW3l/view?usp=drive_link"
         target="_blank"
       >
         <span className="text-white">Download Full Resume</span>
